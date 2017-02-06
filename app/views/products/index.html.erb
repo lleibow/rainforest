@@ -8,6 +8,6 @@ link to go to its show page. -->
 <%= @products.each do |product| %>
   <p> <%= product.name %></p>
   <p> <%= product.description %> </p>
-  <p> <%= product.price_in_cents %></p>
+  <p> <%= product.formatted_price %></p>
   <p> <%= link_to "Product", product_url(product) %>
 <% end %>
