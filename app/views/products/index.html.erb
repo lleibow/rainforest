@@ -1,0 +1,13 @@
+<!-- on the homepage I am presented with a list of all the
+products and two links to signup or login, and a third link
+to create a new product. a. Each product in the list is
+displayed with its name, description, and price, and has a
+link to go to its show page. -->
+
+<h1>Products</h1>
+<%= @products.each do |product| %>
+  <p> <%= product.name %></p>
+  <p> <%= product.description %> </p>
+  <p> <%= product.price_in_cents %></p>
+  <p> <%= link_to "Product", product_url(product) %>
+<% end %>
